@@ -15,7 +15,7 @@ public class JPTV20Task4DmitriTsurakov {
         int[] numbers = new int[100];
         int counter = 0;
         
-        //Заполнить массив четными числами
+        //Заполнить массив нечетными числами
         while(counter < 10){
             int a = random.nextInt(100);
             if(a%2 == 1){
@@ -25,29 +25,30 @@ public class JPTV20Task4DmitriTsurakov {
 }
         System.out.println("Массив = " + Arrays.toString(numbers));
         
-        int max = 0;
+        //----- Поиск максимального значения
+        int max = 0;                              
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] > max) {
                 max = numbers[i];
     }
     }
-        int min = max;
+        //----- Поиск минимального значения
+        int min = max;                            
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] < min) {
                 min = numbers[i];
             }
         }
-        
-        
-        
-        int countofmax = 0;                        
+         
+        //----- Среднее
+        int countofmax = 0;                      //количество максимальных значений  
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] == max) {
                 countofmax++;
             }
         }
         
-        int countofmin = 0;                        
+        int countofmin = 0;                      //количество минимальных значений          
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] == min) {
                 countofmin++;
